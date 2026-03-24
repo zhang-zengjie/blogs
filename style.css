@@ -1,0 +1,390 @@
+/* =========================
+   Design Tokens
+========================= */
+
+:root {
+  --bg: #ffffff;
+  --text: #2b2b2b;
+  --muted: #6f6a63;
+  --accent: #8b6b3e;
+  --subaccent: #a1762b;
+  --border: #ece7df;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* =========================
+   Base Typography
+========================= */
+
+body {
+  margin: 0;
+  font-size: 1.1rem;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Spectral", "Georgia", "Times New Roman", serif;
+  line-height: 1.4;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--accent);
+}
+
+h2 {
+  margin: 40px 0px 10px 0px;
+}
+
+p {
+  margin: 0 0 0.5em 0;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   Layout
+========================= */
+
+
+.container {
+  max-width: 1200px;  /* 改为 1200px 以容纳两列布局 */
+  padding: 64px 24px 96px;
+  margin: 0 auto;
+}
+
+.blog-container {
+  max-width: 720px;  /* 改为 1200px 以容纳两列布局 */
+  padding: 64px 24px 96px;
+  margin: 0 auto;
+}
+
+/* 保持主内容区域的阅读宽度，提升可读性 */
+.main-content {
+  max-width: 720px;  /* 限制主内容宽度，保持原有阅读体验 */
+}
+
+/* 调整响应式断点 */
+@media (max-width: 900px) {
+  .container {
+    max-width: 100%;
+    padding: 48px 16px;
+  }
+  
+  .content-with-sidebar {
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    flex: 0 0 auto;
+    margin-bottom: 1.5rem;
+  }
+  
+  .main-content {
+    max-width: 100%;  /* 移动端取消宽度限制 */
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  nav a {
+    margin-left: 0;
+  }
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 64px;
+}
+
+nav a {
+  margin-left: 24px;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+nav a.active {
+  color: var(--accent);
+}
+
+footer {
+  margin-top: 96px;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* =========================
+   Blog List
+========================= */
+
+#blog-list {
+  padding: 0;
+  margin: 0;
+}
+
+#blog-list li {
+  list-style: none;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+}
+
+#blog-list li:hover {
+  color: var(--accent);
+}
+
+.blog-title {
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.4;
+}
+
+.blog-date {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+/* =========================
+   Article Styling
+========================= */
+
+article {
+  margin-top: 48px;
+}
+
+article h1 {
+  font-size: 1.6rem;
+  font-weight: normal;
+  margin-bottom: 4px;
+}
+
+article .meta {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 32px;
+}
+
+article blockquote {
+  margin: 16px 0;
+  padding-left: 16px;
+  border-left: 3px solid var(--border);
+  color: var(--muted);
+}
+
+article code {
+  font-family: monospace;
+  background: #f6f4f1;
+  padding: 2px 4px;
+  font-size: 0.9em;
+}
+
+.article-content p {
+  margin: 0 0 1em 0;
+  text-align: justify !important;
+  text-justify: inter-word;
+}
+
+.article-content ul {
+  list-style: disc;
+  padding-left: 1.4em;
+  margin-bottom: 1em;
+}
+
+.article-content li {
+  padding: 0.25em 0;
+}
+
+.article-content h3 {
+  margin-top: 0.6em;
+}
+
+/* =========================
+   Projects Section (合并后的样式)
+========================= */
+
+#projects {
+  margin-top: 0px;
+}
+
+#projects h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  border-bottom: 1px solid #8b6b3e;
+  padding-bottom: 4px;
+}
+
+.project {
+  position: relative;
+  margin-bottom: 5px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.project-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 0;
+  color: var(--subaccent);
+}
+
+/* 项目描述包装器 - 用于渐变和展开/收起 */
+.project-description-wrapper {
+  position: relative;
+  max-height: 150px;  /* 收起时的高度 */
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.project-description-wrapper.expanded {
+  max-height: 2000px;  /* 展开时的高度 */
+  transition: max-height 0.5s ease-in;
+}
+
+/* 渐变遮罩 - 仅在收起时显示 */
+.project-description-wrapper:not(.expanded)::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: linear-gradient(to bottom, transparent, var(--bg) 90%);
+  pointer-events: none;
+}
+
+/* 项目描述文字样式 */
+.project-description {
+  font-size: 1.1rem;  /* 保持与正文一致 */
+  line-height: 1.4;
+  color: #444;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  max-width: 800px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* 展开/收起按钮样式 */
+.toggle-button {
+  display: inline-block;
+  margin: 0px 0 0px 0;
+  color: var(--accent);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 4px 0;
+  border-bottom: 1px dashed var(--accent);
+}
+
+.toggle-button:hover {
+  border-bottom: 1px solid var(--accent);
+}
+
+/* 项目链接样式 */
+.project-links {
+  margin-top: 0px;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.project-links a {
+  font-size: 1.1rem;
+  margin-right: 0px;
+  text-decoration: none;
+  color: var(--accent);
+  transition: border 0.2s ease;
+}
+
+.project-links a:hover {
+  border-bottom: 1px solid #555;
+  color: var(--subaccent);
+}
+
+/* 其他 */
+.section-block {
+  margin-bottom: 12px;
+}
+
+.ongoing-tag {
+  color: #aaaaaa;  /* 浅红色 - 表示进行中 */
+}
+
+.external {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 1.4rem;
+  margin-top: 10px;
+  line-height: 2rem;
+}
+
+.nav {
+  font-size: 1.2rem;
+}
+
+/* 添加两列布局样式 */
+.content-with-sidebar {
+  display: flex;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.sidebar {
+  flex: 0 0 280px; /* 固定宽度 280px */
+}
+
+.main-content {
+  flex: 1;
+  min-width: 0; /* 防止内容溢出 */
+}
+
+/* 移动端适配：在小屏幕上改为单列布局 */
+@media (max-width: 768px) {
+  .content-with-sidebar {
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    flex: 0 0 auto;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* 调整 LinkedIn Badge 样式，使其更适合侧边栏 */
+.sidebar .badge-base {
+  width: 100% !important;
+}
+
+/* 可选：添加一些间距和视觉效果 */
+.sidebar-section {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.sidebar-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
