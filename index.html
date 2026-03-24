@@ -13,11 +13,32 @@
   <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
 </head>
 <body>
-  <div class="blog-container">
+
+  <div class="container">   
+    <!-- 两列布局容器 -->
+    <div class="content-with-sidebar">
+      <!-- 左侧边栏 -->
+      <aside class="sidebar">
+        <div class="sidebar-section">
+          <!-- <div class="sidebar-title">Connect</div> -->
+          <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+        <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="HORIZONTAL" data-vanity="zengjie-zhang" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://nl.linkedin.com/in/zengjie-zhang?trk=profile-badge">CONNECT</a></div>
+        </div>
+        
+        <!-- 可选：添加其他侧边栏内容 -->
+        <!-- <div class="sidebar-section">
+          <div class="sidebar-title">Contact</div>
+          <p>Email: zengjie@azonai.co</p>
+        </div> -->
+      </aside>
+      
+      <!-- 右侧主要内容区域 -->
+      <main class="main-content">
+
     <header>
       <div>Zengjie Zhang</div>
       <nav>
-        <a href="https://www.zengjiezhang.com">Home</a>
+        <a href="index.html">Home</a>
         <a href="https://blogs.zengjiezhang.com" class="active">Blogs</a>
       </nav>
     </header>
@@ -31,8 +52,9 @@
     <footer>
       © Zengjie Zhang · Blogs · <a href="mailto:zengjie@azonai.co">Contact</a>
     </footer>
+    </main>
   </div>
-
+</div>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script src="js/markdown-loader.js"></script>
   <script>
