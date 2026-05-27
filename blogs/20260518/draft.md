@@ -124,7 +124,7 @@ In essence, formal specification provides a **language to expose and reason abou
 在结束的时候，我们要指明，这个Perspective可以帮助我们更好地描述和定义问题的边界，但无法解决。。。。真正。。。的问题；通过上面。。。。可以看到。。。。。【关键要指明这个context 变量在现实建模中是极其难以刻画的(nontractable)，因为它不但描述了动态的环境变化，还描述了所有智能体之间的interaction mode(这个词合适吗？有更合适的吗？)】从。。。。可以看出，根本问题就在于这个context variables，它和上一节SOTIF中。。。。。。描述的是一致的。这个context variables 刻画了某个agent是如何"understand" 一个situation的。【在这里，合适的地方点一下“semantics”，也就是context space其实描述了agent 对环境semantics的最大表达】如果说所有的state描述了agent能够看到的。。。。。那么这些context variables 就。。。了智能体能如何理解。。。以及理解到什么程度；关于“看到”和“理解”之间的区别和联系请看[这一篇blog](link)。
 
 
-### **The Core Challenges in Resolving the Trade-off**【标题需要修改，你看这样行不行？“Context Space, the 冰山在海面下的部分”你有更好的建议吗？】
+### **The Core Challenges in Resolving the Trade-off**【标题需要修改，在上面的小节中我们已经到达了"context"，在这一小节我们要更进一步：你有更好的建议吗？比如：contextual structure，海面下的冰山，怎么样？】
 
 
 Recognizing the rules–feasibility dilemma and formalizing it through R, F, and C is only the beginning 【相应地需要改，因为我们上面分别从SOTIF和formal的角度来分析了问题到底源自哪里；因此这里应该改成“定位到context space”只是个开始】. The real challenge lies in **understanding and managing the complexity of the variables** that determine how, when, and which rules can be softened without compromising safety.
