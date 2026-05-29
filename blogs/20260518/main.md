@@ -313,7 +313,7 @@ The distinction between “seeing” and “understanding” turns out to be far
 </div>
 
 
-***Figure 2:*** *Illustration of a simplified specification space under contextual influence. The objective is to identify a feasible policy $\pi^*$, represented by a trajectory tuple $(s_1, s_2)$ evolving within state spaces $S_1$ and $S_2$ , subject to safety-related rules $R_1$ and $R_2$ (red and purple regions), as well as feasibility objectives $F_1$ and $F_2$ (yellow regions). Importantly, these constraints and objectives are themselves conditioned on hidden contextual variables $c \in \mathcal{C}$ , which are not directly observable within the solution space.*
+***Figure 2:*** *Illustration of a simplified specification space under contextual influence. The objective is to identify a feasible policy $\pi$, represented by a trajectory tuple $(s_1, s_2)$ evolving within state spaces $S_1$ and $S_2$ , subject to safety-related rules $R_1$ and $R_2$ (red and purple regions), as well as feasibility objectives $F_1$ and $F_2$ (yellow regions). Importantly, these constraints and objectives are themselves conditioned on hidden contextual variables $c \in \mathcal{C}$ , which are not directly observable within the solution space.*
 
 *The left panel illustrates a context in which strict rule satisfaction remains compatible with feasible operation. The right panel shows how changes in contextual conditions may deform, shrink, or even eliminate the feasible solution domain. In such situations, a feasible policy may still exist if certain lower-priority constraints (purple) are temporarily relaxed and treated as soft constraints.*
 
