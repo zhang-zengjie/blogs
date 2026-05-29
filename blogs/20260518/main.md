@@ -191,7 +191,9 @@ That requires **making the hidden contextual variables visible**.
 
 > **Figure 1** illustrates a simple but intuitive example on how contextual variables (e.g., traffic density) affects safety category of scenarios.
 
-![The Dumb Bell Chart](context-SOTIF.svg)
+<div style="text-align: center;">
+<img src="blogs/20260518/context-SOTIF.svg" alt="The Dumb Bell Chart" width="640">
+</div>
 
 ***Figure 1***: *The "Dumb Bell" Chart — How a contextual variable (traffic density) shapes hazard/nonhazard categorization. The horizontal axis represents the hazard/nonhazard dimension of the SOTIF categorization, while the vertical axis represents different values of a contextual variable — traffic density (normal vs. dense). Each dumbbell illustrates the same type of behavior (scenario) placed in different quadrants under different traffic densities. This highlights that hazard classification is context-dependent: the same behavior can be hazardous in one context and nonhazardous in another. Extension to additional contextual variables (such as intentions, driving styles, interactions, etc) may result in a higher dimensional "Dumb Bell" Chart*.
 
@@ -306,7 +308,10 @@ The distinction between “seeing” and “understanding” turns out to be far
 
 > Figure 2 provides a simplified illustration of how contextual variables can fundamentally reshape the feasible solution space and how a "softened" solution is made.
 
-![Formal perspective](formal_perspective.svg)
+<div style="text-align: center;">
+<img src="blogs/20260518/formal_perspective.svg" alt="SOTIF" width="640">
+</div>
+
 
 ***Figure 2:*** *Illustration of a simplified specification space under contextual influence. The objective is to identify a feasible policy $\pi^*$, represented by a trajectory tuple $(s_1, s_2)$ evolving within state spaces $S_1$ and $S_2$ , subject to safety-related rules $R_1$ and $R_2$ (red and purple regions), as well as feasibility objectives $F_1$ and $F_2$ (yellow regions). Importantly, these constraints and objectives are themselves conditioned on hidden contextual variables $c \in \mathcal{C}$ , which are not directly observable within the solution space.*
 
