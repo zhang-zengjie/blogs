@@ -13,11 +13,11 @@ If you strictly wait for the “perfectly safe” gap, you may seem to remain st
 
 But as you watch vehicle after vehicle around you opportunistically squeezing into tiny openings, inching forward little by little, you begin to realize something uncomfortable, and you cannot help but imagine the worst-case outcome:
 
->  that everyone else will continue making progress while you alone remain trapped by the very rules designed to maintain order.
+> Everyone else will continue making progress while you alone remain trapped by the very rules designed to maintain order.
 
 And once that thought appears, another question inevitably follows:
 
-> can you really afford to be the only one who follows every rule absolutely literally?
+> Can you really afford to be the only one who follows every rule absolutely literally?
 
 If you genuinely begin asking yourself this question, then you have already stepped into what I would call the **rule–goal dilemma**: the tension between constraints designed to preserve safety and the practical necessity of achieving goals in real-world traffic.
 
@@ -53,19 +53,19 @@ The conflict becomes especially visible in dense interactive environments:
 
 Yet in reality, the solution is often neither extreme. Most real-world traffic systems operate somewhere in between. Drivers rarely abandon constraints entirely; instead, they continuously and often implicitly *relax* certain constraints in context-sensitive ways in order to maintain overall flow and coordination.
 
-In some situations, society even formalizes such exceptions explicitly. Emergency vehicles such as ambulances, fire trucks, and police vehicles are granted extraordinary operational privileges. Ordinary vehicles must yield, even when they technically possess the right of way. In other words, society intentionally grants a small number of highly regulated actors permission to temporarily prioritize operational urgency over normal traffic constraints. Importantly, however, these privileges are tightly controlled and carefully bounded. Ordinary drivers are generally not allowed to unilaterally decide that their own urgency justifies overriding rules.
+In some situations, society even formalizes such exceptions explicitly, by setting *priority*. Emergency vehicles such as ambulances, fire trucks, and police vehicles are granted extraordinary operational privileges. Ordinary vehicles must yield, even when they technically possess the right of way. In other words, society intentionally grants a small number of highly regulated actors permission to temporarily prioritize operational urgency over normal traffic constraints. Importantly, however, these privileges are tightly controlled and carefully bounded. Ordinary drivers are generally not allowed to unilaterally decide that their own urgency justifies overriding rules.
 
 For everyday human driving, these tensions are instead resolved through social norms, implicit negotiation, and mutual assumptions about morality, patience, responsibility, and cooperation. Drivers continuously “gamble” on each other’s judgment: yielding here, forcing slightly there, assuming that others will notice, react, and accommodate. In many ways, traffic systems rely on this hidden social layer far more heavily than formal regulations alone would suggest.
 
 But once the driver is no longer a human — once driving decisions are delegated to machines and algorithms — the situation changes fundamentally.
 
-For humans, appropriately relaxing certain constraints under context is often intuitive, tacit, and socially negotiated. For machines, however, this process is far from obvious. This is precisely the world of ADAS and autonomous driving systems (ADS). Machines cannot rely on intuition, tacit social understanding, moral judgment, or informal negotiation. Ambiguities that humans navigate naturally become algorithmically difficult to interpret, difficult to attribute responsibility for, and extremely difficult to audit systematically.
+For humans, appropriately relaxing certain constraints under context is often intuitive, tacit, and socially negotiated. For machines, however, this process is far from obvious. This is exactly the world of ADAS and autonomous driving systems (ADS). Machines cannot rely on intuition, tacit social understanding, moral judgment, or informal negotiation. Ambiguities that humans navigate naturally become intractable to interpret by algorithms, difficult to attribute responsibility for, and extremely challenging to audit systematically.
 
-And this immediately raises a deeper question:
+This immediately raises a deeper question:
 
-> Should operational feasibility itself be considered part of the specification?
+> Should operational feasibility itself be considered part of the specification and taken seriously?
 
-Because once feasibility enters the specification space, the problem is no longer simply about enforcing rules. It becomes a question of how systems should interpret, negotiate, and operationalize constraints under dynamically evolving contextual conditions.
+Once feasibility enters the specification space, the problem is no longer simply about enforcing rules. It becomes a question of how systems should interpret, negotiate, and operationalize constraints under dynamically evolving contextual conditions.
 
 
 
@@ -73,7 +73,7 @@ Because once feasibility enters the specification space, the problem is no longe
 
 Once we step beyond the intuitive surface of the rule–goal dilemma, a much deeper problem begins to emerge:
 
-> what exactly does it mean to “appropriately relax” a rule in a complex traffic system?
+> What exactly does it mean to “appropriately relax” a rule in a complex traffic system?
 
 At first glance, the answer appears deceptively simple. If rules seem too conservative in certain extreme situations, slightly relaxing them appears sufficient to restore progress.
 
@@ -89,7 +89,7 @@ Importantly, traffic laws themselves are not entirely rigid. Most legal systems 
 
 However, this flexibility is highly subjective. Different individuals interpret the conditions for “reasonable flexibility” very differently, even when they are trained under identical regulations, educated through the same driving curriculum, and share broadly similar cultural norms.
 
-And the situation becomes even more complicated once we consider *context*:
+Also, the situation becomes even more complicated once we consider *context*:
 
 > Even if every traffic participant possessed exactly the same mindset, identical moral standards, comparable personalities, and perfectly consistent interpretations of traffic law, they would still face fundamentally different local situations. 
 
@@ -102,10 +102,6 @@ This is where the problem begins to resemble a large-scale multi-agent dynamical
 Even under highly idealized assumptions — homogeneous agents with identical rules, identical training, and identical objectives — complex interactions can still produce radically different equilibrium states. Some traffic configurations naturally converge toward cooperative flow; others drift toward aggressive competition, deadlock, or even livelock-like behaviors, where participants continuously react to each other without meaningful global progress.
 
 These *emergent equilibria* are highly sensitive to perturbations. Small local changes in timing, density, or driver behavior can completely alter the global interaction pattern. As a result, many traffic phenomena that appear “irrational” at the individual level may actually emerge naturally from the collective dynamics of the system itself.
-
-And capturing such behaviors during testing and validation is extremely difficult.
-
-Traditional testing approaches implicitly assume that feasibility is largely guaranteed: if the system avoids collisions and obeys traffic rules, then eventual success is expected given sufficient time. But dense urban traffic often violates this assumption completely. A busy intersection during rush hour is not merely a “high-volume scenario”; it is a space of emergent interaction dynamics, where local compromises, implicit negotiations, and opportunistic maneuvers continuously reshape the operational environment itself.
 
 Under such conditions, concepts like **safety margins** and **feasibility limits** become inherently *context-dependent*. A following distance that is perfectly reasonable on a highway may become operationally infeasible in congested city traffic. Human drivers frequently adopt opportunistic or mildly aggressive behaviors not necessarily because they are irrational, but because rigid compliance may otherwise prevent meaningful progress entirely.
 
@@ -153,9 +149,9 @@ Within a SOTIF perspective, the difficulty is not simply determining whether a p
 
 For example:
 
-- A narrow merge maneuver may appear dangerously aggressive in one context, yet entirely normal and socially expected in another.
-- A reduced following distance may represent unacceptable risk under poor visibility, but become operationally necessary in dense stop-and-go traffic.
-- Hesitating indefinitely at an intersection may technically preserve rule compliance, yet create new forms of operational risk through deadlock, obstruction, or cascading interaction effects.
+- A *narrow merge* maneuver may appear dangerously aggressive in one context, yet entirely normal and socially expected in another.
+- A *reduced following distance* may represent unacceptable risk under poor visibility, but become operationally necessary in dense stop-and-go traffic.
+- *Hesitating indefinitely* at an intersection may technically preserve rule compliance, yet create new forms of operational risk through deadlock, obstruction, or cascading interaction effects.
 
 The meaning of safety itself begins to depend on *contextual variables* that are dynamic, interdependent, and often only partially observable.
 
@@ -193,7 +189,13 @@ Even before such scenarios can ever be reliably solved, optimized, or standardiz
 
 That requires **making the hidden contextual variables visible**.
 
-## Anchoring the Dilemma Through a Formal Perspective
+> **Figure 1** illustrates a simple but intuitive example on how contextual variables (e.g., traffic density) affects safety category of scenarios.
+
+![The Dumb Bell Chart](context-SOTIF.svg)
+
+***Figure 1***: *The "Dumb Bell" Chart — How a contextual variable (traffic density) shapes hazard/nonhazard categorization. The horizontal axis represents the hazard/nonhazard dimension of the SOTIF categorization, while the vertical axis represents different values of a contextual variable — traffic density (normal vs. dense). Each dumbbell illustrates the same type of behavior (scenario) placed in different quadrants under different traffic densities. This highlights that hazard classification is context-dependent: the same behavior can be hazardous in one context and nonhazardous in another. Extension to additional contextual variables (such as intentions, driving styles, interactions, etc) may result in a higher dimensional "Dumb Bell" Chart*.
+
+## Revealing the Contextual Variables Through a Formal Perspective
 
 SOTIF highlights the importance of identifying hazards that emerge beyond simple functional failures. But as the previous discussion suggests, many of the most difficult scenarios are not merely “unknown hazards” in the traditional sense. More fundamentally, they involve **hidden contextual structures** that continuously reshape the boundary between safe, unsafe, feasible, and infeasible behavior.
 
@@ -249,7 +251,9 @@ The problem may therefore be framed as follows:
 
 This is exactly where the true difficulty begins.
 
-Rules and feasibility objectives are not independent quantities. They are deeply coupled because they depend upon the same contextual structure $C$ . Certain contextual configurations may naturally align both objectives; others may place them into direct tension.
+Interestingly, rules $R$ and feasibility objectives $F$ can be expressed in the same formal mathematical form, suggesting that operational feasibility could naturally be incorporated into the specification itself. In our previous collaborative work ([link](https://arxiv.org/abs/2409.09769)), we elaborated on formulating both rules and feasibility as formal specifications and solving for a balanced policy that respects both via optimization.
+
+More importantly, rules and feasibility objectives are not independent quantities. They are deeply coupled because they depend upon the same contextual structure $C$ . Certain contextual configurations may naturally align both objectives; others may place them into direct tension.
 
 Under some traffic equilibria, strict rule satisfaction may remain perfectly feasible. Under others, identical rules may produce stagnation, deadlock, or socially disruptive behavior. Conversely, preserving operational progress may require temporary deviations from idealized constraints.
 
@@ -299,6 +303,14 @@ This observation aligns closely with the SOTIF discussion earlier. The hidden co
 In many ways, the contextual variable space $C$ defines the maximum expressive capacity of an agent’s semantic understanding of the environment. If the observable state describes what an agent can *see*, then contextual structure governs how the agent can *understand* what it sees — and to what extent that understanding remains meaningful under interaction.
 
 The distinction between “seeing” and “understanding” turns out to be far more important than it initially appears.
+
+> Figure 2 provides a simplified illustration of how contextual variables can fundamentally reshape the feasible solution space and how a "softened" solution is made.
+
+![Formal perspective](formal_perspective.svg)
+
+***Figure 2:*** *Illustration of a simplified specification space under contextual influence. The objective is to identify a feasible policy $\pi^*$, represented by a trajectory tuple $(s_1, s_2)$ evolving within state spaces $S_1$ and $S_2$ , subject to safety-related rules $R_1$ and $R_2$ (red and purple regions), as well as feasibility objectives $F_1$ and $F_2$ (yellow regions). Importantly, these constraints and objectives are themselves conditioned on hidden contextual variables $c \in \mathcal{C}$ , which are not directly observable within the solution space.*
+
+*The left panel illustrates a context in which strict rule satisfaction remains compatible with feasible operation. The right panel shows how changes in contextual conditions may deform, shrink, or even eliminate the feasible solution domain. In such situations, a feasible policy may still exist if certain lower-priority constraints (purple) are temporarily relaxed and treated as soft constraints.*
 
 ## Beneath the Iceberg: The Challenge of Contextual Semantics
 
