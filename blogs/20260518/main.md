@@ -192,7 +192,7 @@ That requires **making the hidden contextual variables visible**.
 > **Figure 1** illustrates a simple but intuitive example on how contextual variables (e.g., traffic density) affects safety category of scenarios.
 
 <div style="text-align: center;">
-<img src="blogs/20260518/context-SOTIF.svg" alt="The Dumb Bell Chart" width="640">
+<img src="blogs/20260518/context-SOTIF.svg" alt="The Dumb Bell Chart" width="720">
 </div>
 
 ***Figure 1***: *The "Dumb Bell" Chart — How a contextual variable (traffic density) shapes hazard/nonhazard categorization. The horizontal axis represents the hazard/nonhazard dimension of the SOTIF categorization, while the vertical axis represents different values of a contextual variable — traffic density (normal vs. dense). Each dumbbell illustrates the same type of behavior (scenario) placed in different quadrants under different traffic densities. This highlights that hazard classification is context-dependent: the same behavior can be hazardous in one context and nonhazardous in another. Extension to additional contextual variables (such as intentions, driving styles, interactions, etc) may result in a higher dimensional "Dumb Bell" Chart*.
@@ -309,7 +309,7 @@ The distinction between “seeing” and “understanding” turns out to be far
 > Figure 2 provides a simplified illustration of how contextual variables can fundamentally reshape the feasible solution space and how a "softened" solution is made.
 
 <div style="text-align: center;">
-<img src="blogs/20260518/formal_perspective.svg" alt="SOTIF" width="640">
+<img src="blogs/20260518/formal_perspective.svg" alt="SOTIF" width="720">
 </div>
 
 
