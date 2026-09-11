@@ -180,11 +180,11 @@ But the important question is not whether formal syntax is expressive enough in 
 
 For example, "keeping a safe distance" could be represented as either
 
-$$\square ~, d > d_{\text{threshold-in-general}}$$
+$$\square ~ d > d_{\text{threshold-in-general}}$$
 
 or
 
-$$(\square \, \text{Front\_Car\_Cutin} \rightarrow d > d_{\mathrm{threshold\_for\_cutin}}) \wedge (\square \, \text{Front\_Car\_Braking} \rightarrow d > d_{\mathrm{threshold\_for\_braking}})$$
+$$(\square ~ \text{Front-Car-Cutin} \rightarrow d > d_{\mathrm{threshold-for-cutin}}) \wedge (\square ~ \text{Front-Car-Braking} \rightarrow d > d_{\mathrm{threshold-for-braking}})$$
 
 Both can have correct syntax, but they encode different semantic interpretations because the definitions of the thresholds and the relevant contexts are different.
 
@@ -233,11 +233,8 @@ Note that syntax translation and semantic interpretation may involve two distinc
 The formal specifications will be delivered to an interesting component called **Core Verification Models**, where verification takes place. This component may contain different purpose-specific models, such as:
 
 * **Responsibility Model**, such as RSS-inspired responsibility constraints;
-
 * **Safety Model**, drawing on frameworks such as ISO 26262, ISO 21448/SOTIF, ISO/TS 5083, and applicable UNECE requirements;
-
 * **Ethical & Rights Model**, potentially grounded in legal and fundamental-rights requirements such as the EU AI Act;
-
 * **Traffic Performance Model**, potentially addressing properties related to traffic flow, smoothness, efficiency, and the impact of an ADS on surrounding traffic.
 
 Each model has a clear and specific objective: whether responsibility-oriented, safety-oriented, ethics- and rights-oriented, or traffic-performance-oriented. Its operational domain can be clearly specified with a certain ODD.
