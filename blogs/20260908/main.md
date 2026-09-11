@@ -1,5 +1,3 @@
-# Why Is Formalizing Regulations So Difficult?
-
 > “The limits of my language mean the limits of my world.”
 > — Ludwig Wittgenstein, *Tractatus Logico-Philosophicus*
 
@@ -71,9 +69,9 @@ Consider a simplified rule:
 
 The syntax is relatively clear. We can represent it as simply as:
 
-$$\square \, d > d_{\mathrm{threshold}}$$
+$$\square ~ d > d_{\mathrm{threshold}}$$
 
-But what exactly is \(d_{\mathrm{threshold}}\)?
+But what exactly is $d_{\mathrm{threshold}}$?
 
 This simple threshold may actually depend on an unbelievably enormous contextual space that contains road geometry, weather, vehicle state, traffic conditions, and the behavior of other road users. By the way, "anticipated behavior" here introduces another layer of uncertainty, which is also a huge topic to discuss. We will leave it for future.
 
@@ -182,7 +180,7 @@ But the important question is not whether formal syntax is expressive enough in 
 
 For example, "keeping a safe distance" could be represented as either
 
-$$\square \, d > d_{\text{threshold\_in\_general}}$$
+$$\square ~, d > d_{\text{threshold-in-general}}$$
 
 or
 
