@@ -7,11 +7,7 @@
 
 An automated driving system (ADS) does not operate in a regulatory vacuum. If we want to determine whether an ADS complies with a traffic rule, a safety requirement, or some other normative constraint, that requirement must eventually become something a machine can interpret, monitor, test, or verify.
 
-At first sight, the path seems straightforward:
-
-**Regulation → Formalization → Machine-checkable specification → Model checking → Verification**
-
-But this apparently simple transition hides a much harder problem.
+At first sight, the path seems straightforward: Regulation → Formalization → Machine-checkable specification → Model checking → Verification. But this apparently simple transition hides a much harder problem.
 
 ### A Kick-off Example
 
