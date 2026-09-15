@@ -53,9 +53,7 @@ A regulation has to remain applicable across a wide range of situations while le
 
 This is not simply because the language is weak. It is also because the space of possible contexts is extremely large.
 
-This creates an interesting consequence for formalization.
-
-There may be several syntactically precise ways to encode the same sentence, while those encodings impose materially different behavioral boundaries.
+This creates an interesting consequence for formalization: there may exist several syntactically precise ways to encode the same sentence, while those encodings impose materially different behavioral boundaries.
 
 The ambiguity, therefore, is not necessarily a defect in the syntax of the regulation, but can be a property of its semantics.
 
