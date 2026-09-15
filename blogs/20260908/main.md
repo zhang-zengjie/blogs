@@ -67,7 +67,7 @@ $$\square ~ d > d_{\mathrm{threshold}}$$
 
 But what exactly is $d_{\mathrm{threshold}}$?
 
-This simple threshold may actually depend on an unbelievably enormous contextual space that contains road geometry, weather, vehicle state, traffic conditions, and the behavior of other road users. By the way, "anticipated behavior" here introduces another layer of uncertainty, which is also a huge topic to discuss. We will leave it for future.
+This simple threshold may actually depend on an unbelievably enormous contextual space that contains road geometry, weather, vehicle state, traffic conditions, and the behavior of other road users. *By the way, "anticipated behavior" here introduces another layer of uncertainty, which is also a huge topic to discuss. We will leave it for future.*
 
 Therefore, even apparently simple concepts such as "safe distance" may depend on assumptions about reaction time, available braking capability, visibility, and the behavior of surrounding agents.
 
@@ -152,9 +152,7 @@ But an ODD does not necessarily capture the entire semantic state of a traffic i
 
 Knowing that an ADS operates on a divided highway in daylight and dry weather does not completely describe what happens when another vehicle cuts in, when two agents have competing intentions, or when the behavior of one road user changes the feasible actions of another.
 
-This is where the interpretation problem becomes fundamentally multi-agent.
-
-The issue is not that existing safety frameworks ignore interaction. On the contrary, contemporary ADS safety evaluation explicitly considers interactions with other road users. UNECE Regulation No. 157, for example, includes assessment of vehicle behavior in response to other road users and scenarios such as following, cut-in, and cut-out behavior.
+This is where the interpretation problem becomes fundamentally multi-agent. Contemporary ADS safety evaluation explicitly considers interactions with other road users. UNECE Regulation No. 157, for example, includes assessment of vehicle behavior in response to other road users and scenarios such as following, cut-in, and cut-out behavior.
 
 These requirements highlight:
 
@@ -212,7 +210,7 @@ This gives us the final boundary:
 
 > **When a complete formal proof is not tractable, evidence may instead be established through a combination of testing, validation, and other forms of assurance.**
 
-### A Conceptual Workflow With Clear Boundaries
+### A Conceptual Graph With Clarified Boundaries
 
 These four aspects make the boundary of formal verification visible, based on which the following conceptual graph can be derived.
 
@@ -228,8 +226,8 @@ The formal specifications will be delivered to an interesting component called *
 
 * **Responsibility Model**, such as RSS-inspired responsibility constraints;
 * **Safety Model**, drawing on frameworks such as ISO 26262, ISO 21448/SOTIF, ISO/TS 5083, and applicable UNECE requirements;
-* **Ethical & Rights Model**, potentially grounded in legal and fundamental-rights requirements such as the EU AI Act;
-* **Traffic Performance Model**, potentially addressing properties related to traffic flow, smoothness, efficiency, and the impact of an ADS on surrounding traffic.
+* **Ethical & Rights Model**, potentially grounded in legal and fundamental-rights requirements such as the EU AI Act.
+* ...
 
 Each model has a clear and specific objective: whether responsibility-oriented, safety-oriented, ethics- and rights-oriented, or traffic-performance-oriented. Its operational domain can be clearly specified with a certain ODD.
 
@@ -239,9 +237,9 @@ If a simple and sufficiently precise system model exists, formal verification ca
 
 Note that the formal specifications derived from regulations are not necessarily complete or fully faithful to the original regulations, because **the target of verification is not to prove that regulations are satisfied, but to provide evidence that the defined verification objective is achieved**.
 
-Note that this graph does not intend to suggest any specific solution. What makes it interesting is that a clear boundary is settled. Within the **Core Models** lies the actual verification process, which can be rigorous—and increasingly automated. Outside lies the process where non-technical groups of experts and agencies are involved.
+Note that this graph does not intend to suggest any specific solution. What makes it interesting is that the boundary of formal methods is clarified. Within the **Core Models** lies the actual verification process, which can be rigorous—and increasingly automated. Outside lies the process where non-technical groups of experts and agencies are involved.
 
-However, the conversion of regulations to specifications is not necessarily the most challenging part once a much smaller objective and scope of verification have been determined by the core models, compared to the conventional question of formalizing the entire regulation.
+In this sense, the conversion of regulations to specifications is not necessarily the most challenging part once a much smaller objective and scope of verification have been determined by the core models, compared to the conventional question of formalizing the entire regulation.
 
 RSS is an excellent example of this idea. It does not attempt to formalize the entire traffic regulatory world. Instead, it defines a relatively narrow set of responsibility-sensitive safety constraints under explicit assumptions. Its strength therefore comes not from formalizing everything, but from choosing a semantic boundary within which formal reasoning becomes meaningful.
 
@@ -253,9 +251,9 @@ Such a knowledge base might represent road and environmental conditions, traffic
 
 This immediately raises an obvious question with emerging AI:
 
-**Could a large language model do this?**
+**Could a large language model (LLM) do this?**
 
-Potentially, yes.
+Potentially, yes, but with conditions.
 
 Their strength is exactly the ability to process enormous amounts of heterogeneous language and connect information across documents, concepts, and contexts. This makes them attractive at the context-to-interpretation interface.
 
